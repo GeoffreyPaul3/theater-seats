@@ -4,11 +4,29 @@ const seatMapContainer = document.getElementById("seatMapContainer");
 const selectedSeatsList = document.getElementById("selectedSeats");
 const bookButton = document.getElementById("bookButton");
 const totalPriceDisplay = document.getElementById("totalPrice");
+const scrollToTopButton = document.getElementById("scrollToTop");
 
 document.getElementById("scrollToSeats").addEventListener("click", function () {
   document
     .getElementById("seatMapContainer")
     .scrollIntoView({ behavior: "smooth" });
+});
+
+// Show scroll-to-top button when user scrolls down
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 200) {
+    scrollToTopButton.style.display = "block";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
+});
+
+// Scroll to top when button is clicked
+scrollToTopButton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
 
 // Create seat map
@@ -17,7 +35,9 @@ function createSeatMap(rows, cols) {
     for (let col = 1; col <= cols; col++) {
       const seat = document.createElement("div");
       seat.classList.add("seat");
-      seat.textContent = `${String.fromCharCode(64 + row)}${col}`;
+      seat.innerHTML = `<i class="fas fa-chair"></i> ${String.fromCharCode(
+        64 + row
+      )}${col}`;
       seatMapContainer.appendChild(seat);
     }
   }
