@@ -1,0 +1,106 @@
+/* styles.css */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #f8f9fa;
+}
+
+p {
+  color: #e3e6e9;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.seat {
+  background-color: #f8f9fa;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.seat:hover {
+  background-color: #ced4da;
+}
+
+.seat.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.summary,
+.contain {
+  background-color: #007bff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summary h2 {
+  color: #fff;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  color: #ffff;
+}
+
+#totalPrice {
+  font-weight: bold;
+}
+
+#bookButton {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #141b16;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#bookButton:hover {
+  background-color: #313a33;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #141b16;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #313a33;
+}
